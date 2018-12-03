@@ -1,0 +1,14 @@
+﻿<div style="margin-top:150px">
+    <ul>
+        <li>
+            <a href="@Url.Action("ae", "Departments", null)">
+                <img src="1.jpg" style="vertical-align: middle; width: 30px;"> Architecture
+                </a>
+        </li>
+        <li>@Html.ActionLink("Civil Engineering", "civ", new { @id = "CIV" }, null)</li>
+        <li>@Html.ActionLink("Computer Engineering", "ce", new { @id = "CE" }, null)</li>
+        <li>@Html.ActionLink("Electrical Engineering", "ee", new { @id = "EE" }, null)</li>
+        <li>@Html.ActionLink("Mechanical Engineering", "me", new { @id = "ME" }, null)</li>
+        <li>@Html.ActionLink("Mechatronics Engineering", "mec", new { @id = "MEC" }, null)</li>
+    </ul>
+</div>

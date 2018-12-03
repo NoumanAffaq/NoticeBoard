@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Notice Board</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <header class="header">
+        <div class="header__content row">
+
+            <div class="header__logo">
+                <a class="logo" href="index.html">
+                    <h2 style="color: white"> Notice Board </h2>
+                </a>
+            </div> <!-- end header__logo -->
+            <!-- end header__social -->
+            <!-- end header__search -->
+
+
+            <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+
+            <nav class="header__nav-wrap">
+
+                <h2 class="header__nav-heading h6">Site Navigation</h2>
+
+                <ul class="header__nav">
+                    <li class="current">
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>
+                    <li class="has-children">
+                        <a href="#0" title="">Departments</a>
+                        <ul class="sub-menu">
+                            <li><a href="@Url.Action("ae", "Departments", new { @id = "AE"})">Architecture Engineering</a></li>
+                            <li><a href="@Url.Action("civ", "Departments", new { @id = "CIV" })">Civil Engineering</a></li>
+                            <li><a href="@Url.Action("ce", "Departments", new { @id = "CE" })">Computer Engineering</a></li>
+                            <li><a href="@Url.Action("ee", "Departments", new { @id = "EE" })">Electrical Engineering</a></li>
+                            <li><a href="@Url.Action("me", "Departments", new { @id = "ME" })">Mechanical Engineering</a></li>
+                            <li><a href="@Url.Action("mec", "Departments", new { @id = "MEC" })">Mechatronics Engineering</a></li>
+                        </ul>
+                    </li>
+
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li><a href="login.html" title="">Log in </a></li>
+                    <li><a href="sign.html" title="">Sign up</a></li>
+                </ul> <!-- end header__nav -->
+
+                <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
+
+            </nav> <!-- end header__nav-wrap -->
+
+        </div> <!-- header-content -->
+    </header> <!-- header -->
+    @RenderBody()
+    <hr />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

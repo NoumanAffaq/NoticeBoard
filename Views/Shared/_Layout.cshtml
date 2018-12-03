@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Notice Board</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <header class="header">
+        <div class="header__content row">
+
+            <div class="header__logo">
+                <a class="logo" href="index.html">
+                    <h2 style="color: white"> Notice Board </h2>
+                </a>
+            </div> <!-- end header__logo -->
+            <!-- end header__social -->
+            <!-- end header__search -->
+
+
+            <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+
+            <nav class="header__nav-wrap">
+
+                <h2 class="header__nav-heading h6">Site Navigation</h2>
+
+                <ul class="header__nav">
+                    <li class="current">
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>
+                    <li class="has-children">
+                        <a href="#0" title="">Departments</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">Architecture Engineering</a>
+                                <ul class="sub-menu">
+                                    <li> @Html.ActionLink("2015", "Index", "Notices", new { @dpid = "AE", @sid = "2015" }, null)</li>
+                                    <li> @Html.ActionLink("2016", "Index", "Notices", new { @dpid = "AE", @sid = "2016" }, null)</li>
+                                    <li> @Html.ActionLink("2017", "Index", "Notices", new { @dpid = "AE", @sid = "2017" }, null)</li>
+                                    <li> @Html.ActionLink("2018", "Index", "Notices", new { @dpid = "AE", @sid = "2018" }, null)</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Computer Engineering</a>
+                                <ul class="sub-menu">
+                                    <li> @Html.ActionLink("2015", "Index", "Notices", new { @dpid = "CE", @sid = "2015" }, null)</li>
+                                    <li> @Html.ActionLink("2016", "Index", "Notices", new { @dpid = "CE", @sid = "2016" }, null)</li>
+                                    <li> @Html.ActionLink("2017", "Index", "Notices", new { @dpid = "CE", @sid = "2017" }, null)</li>
+                                    <li> @Html.ActionLink("2018", "Index", "Notices", new { @dpid = "CE", @sid = "2018" }, null)</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Civil Engineering</a>
+                                <ul class="sub-menu">
+                                    <li> @Html.ActionLink("2015", "Index", "Notices", new { @dpid = "CIV", @sid = "2015" }, null)</li>
+                                    <li> @Html.ActionLink("2016", "Index", "Notices", new { @dpid = "CIV", @sid = "2016" }, null)</li>
+                                    <li> @Html.ActionLink("2017", "Index", "Notices", new { @dpid = "CIV", @sid = "2017" }, null)</li>
+                                    <li> @Html.ActionLink("2018", "Index", "Notices", new { @dpid = "CIV", @sid = "2018" }, null)</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Electrical Engineering</a>
+                                <ul class="sub-menu">
+                                    <li> @Html.ActionLink("2015", "Index", "Notices", new { @dpid = "EE", @sid = "2015" }, null)</li>
+                                    <li> @Html.ActionLink("2016", "Index", "Notices", new { @dpid = "EE", @sid = "2016" }, null)</li>
+                                    <li> @Html.ActionLink("2017", "Index", "Notices", new { @dpid = "EE", @sid = "2017" }, null)</li>
+                                    <li> @Html.ActionLink("2018", "Index", "Notices", new { @dpid = "EE", @sid = "2018" }, null)</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Mechatronics Engineering</a>
+                                <ul class="sub-menu">
+                                    <li> @Html.ActionLink("2015", "Index", "Notices", new { @dpid = "MEC", @sid = "2015" }, null)</li>
+                                    <li> @Html.ActionLink("2016", "Index", "Notices", new { @dpid = "MEC", @sid = "2016" }, null)</li>
+                                    <li> @Html.ActionLink("2017", "Index", "Notices", new { @dpid = "MEC", @sid = "2017" }, null)</li>
+                                    <li> @Html.ActionLink("2018", "Index", "Notices", new { @dpid = "MEC", @sid = "2018" }, null)</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Mechanical Engineering</a>
+                                <ul class="sub-menu">
+                                    <li> @Html.ActionLink("2015", "Index", "Notices", new { @dpid = "ME", @sid = "2015" }, null)</li>
+                                    <li> @Html.ActionLink("2016", "Index", "Notices", new { @dpid = "ME", @sid = "2016" }, null)</li>
+                                    <li> @Html.ActionLink("2017", "Index", "Notices", new { @dpid = "ME", @sid = "2017" }, null)</li>
+                                    <li> @Html.ActionLink("2018", "Index", "Notices", new { @dpid = "ME", @sid = "2018" }, null)</li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @Html.Partial("_LoginPartial")
+                </ul> <!-- end header__nav -->
+               
+                <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
+
+            </nav> <!-- end header__nav-wrap -->
+
+        </div> <!-- header-content -->
+    </header> <!-- header -->
+    @RenderBody()
+    <hr />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<NoticeBoard.Models.Notice>
+<div style="margin-top:180px; font-size:30px; text-align:center; text-decoration-color:white">
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartmentID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SessionID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Headlines)
+            </th>
+        </tr>
+        @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartmentID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SessionID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Headlines)
+            </td>
+        </tr>
+}
+
+    </table>
+    </div>

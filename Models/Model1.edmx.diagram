@@ -5,18 +5,17 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="91ddd7cdec1f42219cbae987cff24185" Name="Diagram1">
-        <EntityTypeShape EntityType="NoticeBoardModel.C__MigrationHistory" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="NoticeBoardModel.AspNetRole" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="NoticeBoardModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="NoticeBoardModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="NoticeBoardModel.AspNetUser" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="NoticeBoardModel.Department" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="NoticeBoardModel.Notice" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="NoticeBoardModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <AssociationConnector Association="NoticeBoardModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
-        <AssociationConnector Association="NoticeBoardModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
-        <AssociationConnector Association="NoticeBoardModel.FK_Notices_Departments" ManuallyRouted="false" />
-        <AssociationConnector Association="NoticeBoardModel.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="NoticeBoardModel.AspNetRole" Width="1.5" PointX="0.75" PointY="2.5" />
+        <EntityTypeShape EntityType="NoticeBoardModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="NoticeBoardModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="3.75" />
+        <EntityTypeShape EntityType="NoticeBoardModel.AspNetUser" Width="1.5" PointX="3" PointY="1.375" />
+        <EntityTypeShape EntityType="NoticeBoardModel.Department" Width="1.5" PointX="0.75" PointY="7.25" />
+        <EntityTypeShape EntityType="NoticeBoardModel.Notice" Width="1.5" PointX="3" PointY="6.875" />
+        <EntityTypeShape EntityType="NoticeBoardModel.sysdiagram" Width="1.5" PointX="5.75" PointY="6.75" />
+        <AssociationConnector Association="NoticeBoardModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="NoticeBoardModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="NoticeBoardModel.FK_Notices_Departments" />
+        <AssociationConnector Association="NoticeBoardModel.AspNetUserRoles" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

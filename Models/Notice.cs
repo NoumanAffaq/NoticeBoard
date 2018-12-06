@@ -11,21 +11,17 @@ namespace NoticeBoard.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
     using System.Web;
 
     public partial class Notice
     {
         public string Title { get; set; }
         public string Headlines { get; set; }
-        [DisplayName("Session")]
         public string SessionID { get; set; }
-        [DisplayName("Department")]
         public string DepartmentID { get; set; }
-        [DisplayName("Upload File")]
         public string ImagePath { get; set; }
     
-        public HttpPostedFileBase ImageFile { get; set; }
         public virtual Department Department { get; set; }
+        public HttpPostedFileBase ImageFile { get; set; }
     }
 }

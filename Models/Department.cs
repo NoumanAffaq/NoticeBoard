@@ -14,9 +14,16 @@ namespace NoticeBoard.Models
     
     public partial class Department
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Department()
+        {
+            this.Notices = new HashSet<Notice>();
+        }
+    
         public string DepartmentID { get; set; }
         public string DepartmentName { get; set; }
     
-        public virtual Notice Notice { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Notice> Notices { get; set; }
     }
 }

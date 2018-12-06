@@ -1,15 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="NoticeBoardModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="__MigrationHistory">
-    <Key>
-      <PropertyRef Name="MigrationId" />
-      <PropertyRef Name="ContextKey" />
-    </Key>
-    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
-    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
-    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
-    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
-  </EntityType>
   <EntityType Name="AspNetRoles">
     <Key>
       <PropertyRef Name="Id" />
@@ -70,7 +60,7 @@
   </EntityType>
   <EntityType Name="Notices">
     <Key>
-      <PropertyRef Name="DepartmentID" />
+      <PropertyRef Name="Title" />
     </Key>
     <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Headlines" Type="nvarchar(max)" Nullable="false" />
@@ -146,7 +136,7 @@
   </Association>
   <Association Name="FK_Notices_Departments">
     <End Role="Departments" Type="Self.Departments" Multiplicity="1" />
-    <End Role="Notices" Type="Self.Notices" Multiplicity="0..1" />
+    <End Role="Notices" Type="Self.Notices" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Departments">
         <PropertyRef Name="DepartmentID" />
@@ -157,7 +147,6 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="NoticeBoardModelStoreContainer">
-    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
